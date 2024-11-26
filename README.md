@@ -3,17 +3,27 @@
 ## Introduction
 The aim of this project was to build a model that could classify payments made online as either fraudulent or normal, making use of the machine learning module Scikit-Learn. The whole process involved importing libraries, data cleaning and transformation, data exploration, analysis and visualization, model fitting and validation and can be observed in this [Jupyter Notebook](). The dataset used was obtained from [kaggle](https://www.kaggle.com/datasets/jainilcoder/online-payment-fraud-detection), it consisted of eleven(11) columns and 6362620 rows:
 
-!Step: The time of the transaction in hours.
-!Type: Method used to make payment for the transaction.
-!Amount: The amount paid. 
-!NameOrig: The name of the sender.
-!OldbalanceOrg: The initial account balance of the sender before the transaction.
-!NewbalanceOrig: The final account balance of the sender after the transaction.
-!NameDest: The name of the recipient.
-!OldbalanceDest: The initial account balance of the recipient before the transaction.	
-!NewbalanceDest: The final account balance of the recipient after the transaction.	
-!IsFraud: Binary classification for transactions, 0 for normal transaction, 1 for fraud.
-!IsFlaggedFraud: Transactions flagged by the recipient to be fraud.
+**Step**: The time of the transaction in hours.
+
+**Type**: Method used to make payment for the transaction.
+
+**Amount**: The amount paid.
+
+**NameOrig**: The name of the sender.
+
+**OldbalanceOrg**: The initial account balance of the sender before the transaction.
+
+**NewbalanceOrig**: The final account balance of the sender after the transaction.
+
+**NameDest**: The name of the recipient.
+
+**OldbalanceDest**: The initial account balance of the recipient before the transaction.	
+
+**NewbalanceDest**: The final account balance of the recipient after the transaction.	
+
+**IsFraud**: Binary classification for transactions, 0 for normal transaction, 1 for fraud.
+
+**IsFlaggedFraud**: Transactions flagged by the recipient to be fraud.
 
 ## Importing Libraries
 I started out by importing libraries needed for this project such as Pandas, NumPy, Seaborn, Pyplot from MatPlotLib and several libraries from the Scikit-Learn module.
@@ -29,7 +39,7 @@ I performed an exploratory analysis to uncover trends within the data which are 
 - After creating a class to categorize how expensive each transaction was, I discovered that only the least expensive transactions resulted in fraud when compared to 
   the highly and ultra expensive classes of transactions. So only less expensive transactions were fraudulent.
 
-I created a column from the 'old_bal_org' column and 'new_bal_orig' called 'origin_balance_difference(OBD)', I compared this with the amount column and I observed a consistency in their values. I did the same for the 'old_bal_dest' and 'new_bal_dest' creating a 'destination_balance_difference(DBD)' column, but the values derived as the difference between both columns were not consistent with the amount column, giving the impression that the new balance destination column was not correct for all entries in the dataset.
+I created a column from the 'old_bal_org' column and 'new_bal_orig' called 'origin_balance_difference (OBD)', I compared this with the amount column and I observed a consistency in their values. I did the same for the 'old_bal_dest' and 'new_bal_dest' creating a 'destination_balance_difference (DBD)' column, but the values derived as the difference between both columns were not consistent with the amount column, giving the impression that the new balance destination column was not correct for all entries in the dataset.
 
 I also decided to check the correlation between the 'is_fraud' column and every other column in the data, apart from 'is_fraud' itself, the column with the most strong correlation was 'amount'. I categorized the transaction_types into figures to enable the inclusion of this column in the model training and fitting. Then I proceeded to drop the 'OBD', 'DBD' and 'amount_class' columns as they were not needed for the remaining stages of the project.
 

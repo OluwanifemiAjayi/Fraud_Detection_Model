@@ -2,6 +2,7 @@
 
 ## Introduction
 The aim of this project was to build a model that could classify payments made online as either fraudulent or normal, making use of the machine learning module Scikit-Learn. The whole process involved importing libraries, data cleaning and transformation, data exploration, analysis and visualization, model fitting and validation and can be observed in this [Jupyter Notebook](). The dataset used was obtained from [kaggle](https://www.kaggle.com/datasets/jainilcoder/online-payment-fraud-detection), it consisted of eleven(11) columns and 6362620 rows:
+
 !Step: The time of the transaction in hours.
 !Type: Method used to make payment for the transaction.
 !Amount: The amount paid. 

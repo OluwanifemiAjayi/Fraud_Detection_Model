@@ -2,6 +2,7 @@
 
 ## Introduction
 The aim of this project was to build a model that uses machine learning algorithms to classify online transactions as either fraudulent or normal. The process can be observed in this [Jupyter Notebook](https://github.com/OluwanifemiAjayi/Fraud_Detection_Model/blob/main/Online_payments_fraud_detection.ipynb), the dataset used was obtained from [kaggle](https://www.kaggle.com/datasets/jainilcoder/online-payment-fraud-detection) and it consists of eleven(11) columns and 6362620 rows:
+
 **Step**: The transaction time in hours, one step being equivalent to an hour.**Type**: The method used to make payment for the transaction.**Amount**: The amount paid.**NameOrig**: The name of the sender.**OldbalanceOrg**: The initial account balance of the sender before the transaction.**NewbalanceOrig**: The final account balance of the sender after the transaction.**NameDest**: The name of the recipient.**OldbalanceDest**: The initial account balance of the recipient before the transaction.**NewbalanceDest**: The final account balance of the recipient after the transaction.**IsFraud**: Binary classification for transactions, 0 for normal transactions, 1 for fraudulent tansactions.**IsFlaggedFraud**: Transactions flagged by the recipient to be fraud.
 
 ## Importing Libraries
@@ -38,6 +39,7 @@ The model uses the machine learning algorithm, XGBClassifier, to classify transa
 
 ## Deployment
 The model was deployed as an application using Streamlit. 
+
 Web Application Link: https://frauddetectorui-ewfcrgpuqfanahpwhitieg.streamlit.app/
 
 ## Usage
